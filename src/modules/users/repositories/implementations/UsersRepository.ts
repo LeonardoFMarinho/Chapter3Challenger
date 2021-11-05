@@ -42,7 +42,7 @@ export class UsersRepository implements IUsersRepository {
 
     //better resolution
 
-    const sql = `SELECT * FROM users WHERE LOWER(fist_name) = LOWER('${first_name}')and  LOWER(last_name) = LOWER('${last_name}')`
+    const sql = `SELECT * FROM users WHERE LOWER(first_name) = LOWER('${first_name}')and  LOWER(last_name) = LOWER('${last_name}')`
     return this.repository.query(sql); // Complete usando raw query
   }
 }
